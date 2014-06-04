@@ -2,6 +2,9 @@
     <wb-module deploy-name="VictorWeb">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="src.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/src/src">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="VictorWeb"/>
         <property name="java-output-path" value="/VictorWeb/build/classes"/>
     </wb-module>
