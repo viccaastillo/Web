@@ -78,8 +78,8 @@ public class AgregarTarea extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
 		
-		Tarea.setTitle(request.getParameter("title"));
-		Tarea.setDescription(request.getParameter("description"));
+		Tarea.setTitle(request.getParameter("titulo"));
+		Tarea.setDescription(request.getParameter("Description"));
 	Tarea.setEntrega(request.getParameter("due_date"));
 	
 	Tarea.setEstado((request.getParameter("State")));
@@ -98,7 +98,7 @@ public class AgregarTarea extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		writer.print("<html><body>" +"La Tarea se Agrego con exito"+ "</body></html>"+"<br>");
 		writer.print("<html><body>" +"Con el titulo: "+ request.getParameter("titulo")+"<br>");
-		writer.print("<html><body>" +"Fecha de ngreso: "+ new Date()+"<br>");
+	writer.print("<html><body>" +"Fecha de ngreso: "+ new Date()+"<br>");
 		writer.print("<html><body>" +"Fecha de Entrega: "+ request.getParameter("due_date")+"<br>" );
 	
 		}
